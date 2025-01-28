@@ -1,38 +1,117 @@
-.App {
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Wrapper for the upload component */
+.p-4 {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 400px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 24px;
+  color: #333333;
+  margin-bottom: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Radio button styles */
+label {
+  font-size: 16px;
+  color: #333333;
+  margin-right: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+input[type="radio"] {
+  margin-right: 8px;
+}
+
+/* Input field styling */
+input[type="text"], input[type="file"] {
+  width: 80%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+input[type="text"]:focus, input[type="file"]:focus {
+  border-color: #0056b3;
+  outline: none;
+}
+
+/* Button Styling */
+button {
+  background-color: #0056b3;
   color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #003d7a;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Image preview */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 15px;
+  animation: fadeIn 1s ease-out;
+}
+
+/* Animation for image fade-in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Message styling */
+.mt-4 {
+  margin-top: 15px;
+}
+
+.text-lg {
+  font-size: 18px;
+}
+
+.text-blue-600 {
+  color: #007bff;
+}
+
+.text-green-600 {
+  color: #28a745;
+}
+
+/* Adjust for small screens */
+@media (max-width: 600px) {
+  .p-4 {
+    width: 100%;
+    padding: 15px;
   }
 }
