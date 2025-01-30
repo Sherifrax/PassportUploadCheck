@@ -14,81 +14,62 @@ body {
 .p-4 {
   background-color: #ffffff;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 400px;
+  width: 100%;
+  max-width: 500px;
   text-align: center;
 }
 
 h1 {
   font-size: 24px;
   color: #333333;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
-/* Radio button styles */
-label {
-  font-size: 16px;
-  color: #333333;
-  margin-right: 20px;
-}
-
-input[type="radio"] {
-  margin-right: 8px;
-}
-
-/* Input field styling */
-input[type="text"], input[type="file"] {
-  width: 80%;
-  padding: 12px;
-  border: 2px solid #ddd;
+/* Crop Container */
+.crop-container {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Adjust as needed */
+  background: #f0f0f0;
   border-radius: 8px;
-  margin-bottom: 10px;
-  font-size: 16px;
-  margin-top: 16px;
+  overflow: hidden;
+}
+
+/* Controls */
+.controls {
+  margin-top: 20px;
+}
+
+.slider-container {
   margin-bottom: 16px;
 }
 
-input[type="text"]:focus, input[type="file"]:focus {
-  border-color: #0056b3;
-  outline: none;
+.slider-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #555;
 }
 
-/* Button Styling */
-button {
-  background-color: #0056b3;
-  color: white;
-  font-size: 16px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.crop-button {
+  margin-top: 16px;
 }
 
-button:hover {
-  background-color: #003d7a;
+.slider-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #555;
 }
+
 
 /* Image preview */
 img {
   max-width: 100%;
-  height: auto;
   border-radius: 8px;
   margin-top: 15px;
-  animation: fadeIn 1s ease-out;
-}
-
-/* Animation for image fade-in */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
 }
 
 /* Message styling */
@@ -106,12 +87,4 @@ img {
 
 .text-green-600 {
   color: #28a745;
-}
-
-/* Adjust for small screens */
-@media (max-width: 600px) {
-  .p-4 {
-    width: 100%;
-    padding: 15px;
-  }
 }
